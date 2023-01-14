@@ -39,6 +39,8 @@ def summary():
     d2 = datetime.strptime(datetime.now().strftime("%Y/%m/%d"), "%Y/%m/%d")
     delta = (d2 - d1).days // 365
 
+    staffs.sort(key=lambda x: x['role'])
+
     response = {
         'details': [
             {'title': 'Canais', 'value': result['channelCount']},
