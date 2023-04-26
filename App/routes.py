@@ -30,7 +30,7 @@ def summary():
             'technologies': memberInfo['skills'] if memberInfo['skills'] else ['n/a']
         }
 
-        if member['role'] in ['admin', 'mod']:
+        if member['role'] in ['admin', 'mod', 'owner']:
             staffs.append(memberObject)
         elif member['role'] == 'booster':
             boosters.append(memberObject)
